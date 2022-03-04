@@ -156,3 +156,14 @@ $(document).ready(function () {
 })
 
 
+let checkExist = setInterval(function () {
+  if ($('.redcommentchapter').length) {
+      clearInterval(checkExist);
+      $('.readtd').each(function () {
+        if (/为营造更好的评论环境|被投诉|地雷/.test($(this).html())) {
+            $(this).hide()
+        }
+    })
+  }
+}, 500); 
+
