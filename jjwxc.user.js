@@ -2,8 +2,11 @@
 // @name        晋江文学城净化脚本
 // @namespace   monkey-script-jjwxc
 // @license MIT 
-// @version     0.0.3
+// @version     0.0.4
 // @description 隐藏部分作者，作品，标签
+
+// @updateURL   https://github.com/TxvVS8c3vC/monkey-script-jjwxc/raw/master/jjwxc.user.js
+// @downloadURL https://github.com/TxvVS8c3vC/monkey-script-jjwxc/raw/master/jjwxc.user.js
 
 // @match        http://*.jjwxc.net/*
 
