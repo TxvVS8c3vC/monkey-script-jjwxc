@@ -2,11 +2,10 @@
 // @name        晋江文学城净化脚本
 // @namespace   monkey-script-jjwxc
 // @license MIT 
-// @version     0.0.4
+// @version     0.0.5
 // @description 隐藏部分作者，作品，标签
 
-// @updateURL   https://github.com/TxvVS8c3vC/monkey-script-jjwxc/raw/master/jjwxc.user.js
-// @downloadURL https://github.com/TxvVS8c3vC/monkey-script-jjwxc/raw/master/jjwxc.user.js
+// @downloadURL none
 
 // @match        http://*.jjwxc.net/*
 
@@ -40,7 +39,7 @@ let badKeywords = /高考|爹|叔叔|\[综|弹幕|DIO|三国|攻略|快穿|六�
 
 let badTypes = /衍生|纯爱|连载/
 
-let nanZhuWuCP = /功德簿/
+let nanZhuWuCP = /功德簿|恶龙咆哮|咸鱼飞升|开局继承博物馆/
 
 
 
@@ -104,12 +103,12 @@ $(document).ready(function () {
   $("a").each(function () {
     let text = $(this).text()
 
-    
+
     let goodNovelArray = []
     for (const [key, value] of Object.entries(goodNovels)) {
       goodNovelArray.push(...value)
     }
-    
+
     if (
       /^.\*\*\*\*\*\*\*.$/.test(text) ||
       badAuthors.test(text) ||
@@ -120,7 +119,7 @@ $(document).ready(function () {
       badKeywords.test(text) ||
       // 男主无CP文屏蔽
       nanZhuWuCP.test(text)
-      ) {
+    ) {
       hide($(this))
     }
   })
@@ -158,12 +157,12 @@ $(document).ready(function () {
 
 let checkExist = setInterval(function () {
   if ($('.redcommentchapter').length) {
-      clearInterval(checkExist);
-      $('.readtd').each(function () {
-        if (/为营造更好的评论环境|被投诉|地雷/.test($(this).html())) {
-            $(this).hide()
-        }
+    clearInterval(checkExist);
+    $('.readtd').each(function () {
+      if (/为营造更好的评论环境|被投诉|地雷/.test($(this).html())) {
+        $(this).hide()
+      }
     })
   }
-}, 500); 
+}, 500);
 
