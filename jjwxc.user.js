@@ -15,7 +15,7 @@
 // @run-at       document-start
 // ==/UserScript==
 
-let goodAuthors = /尾鱼|水心沙/
+let goodAuthors = /某作者/
 
 let goodNovels = {
   "推理": [
@@ -29,15 +29,15 @@ let goodNovels = {
 }
 
 
-let badAuthors = /priest|大风刮过|墨香铜臭|淮上|水千丞|巫哲|非天夜翔/
+let badAuthors = /某作者/
 
 let badNovels = [
   /某书/
 ]
 
-let badKeywords = /高考|爹|叔叔|\[综|弹幕|DIO|三国|攻略|快穿|六零|八零|七零|九零|女皇|军嫂|清穿|抽卡|电竞|花滑|女团|神明|白月光|团宠|为夫|老公|娇|男O|男o|直播|全班|全校|跑团|\[锁\]|无限|密室|游戏|短文|短篇|全家/
+let badKeywords = /高考|爹|叔叔|\[综|弹幕|DIO|三国|攻略|六零|八零|七零|九零|女皇|军嫂|清穿|抽卡|电竞|花滑|女团|神明|白月光|团宠|为夫|老公|娇|男O|男o|直播|全班|全校|跑团|\[锁\]|无限|密室|游戏|短文|短篇|全家/
 
-let badTypes = /衍生|纯爱|连载/
+let badTypes = /衍生|纯爱/
 
 // 以下是男主视角小说
 let nanZhuNovels = /功德簿|恶龙咆哮|咸鱼飞升|开局继承博物馆/
